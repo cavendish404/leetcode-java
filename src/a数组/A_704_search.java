@@ -37,8 +37,9 @@ public class A_704_search {
         int i = low, j = high;
         while (i <= j) {
             int mid = (i + j) / 2;
-            if (nums[mid] == target)
+            if (nums[mid] == target) {
                 return mid;
+            }
             if (nums[mid] > target) {
                 j = mid - 1;
                 binarySearch(nums, target, i, j);
